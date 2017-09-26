@@ -22,7 +22,7 @@ function setup() {
 
 function draw() {
 	background(242, 237, 230);
-	if (mouseX != 0 && mouseY != 0) {
+	if (mouseX != 0 || mouseY != 0) {
 		points.unshift({x:mouseX,y:mouseY});
 	}
 	if (points.length > maxPoints) {
@@ -34,13 +34,6 @@ function draw() {
 	}
 	
 }
-
-function loop0 () {
-	
-	
-}
-
-
 
 
 window.onresize = function(){
