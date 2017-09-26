@@ -1,0 +1,40 @@
+#h1Div {
+	margin: 0 auto;
+	padding-left: 10%;
+	padding-top: 10%;
+	padding-bottom: 30%;
+	font-size: 48px;
+}
+
+#welcome {
+	width: 8em;
+	padding: 15px;
+	background-color: rgba(255,255,255,0.3);
+}
+
+#pageWrapper {
+
+	background-color: rgba(0,0,0,0);
+
+}
+
+#content {
+	width: 50%;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 20px;
+	background-color: rgba(255,255,255,0.8);
+}
+
+.nav li {
+	font-size: 16px;
+}
+
+.zm1 {
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
