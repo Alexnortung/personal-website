@@ -8,6 +8,12 @@ var tick 				= 0;
 
 var backgroundEnabled	= true;
 
+var heads = "🦄🐳🐲";
+var tails = "🌈⭐🔥";
+
+var head = heads[Math.floor(Math.random() * heads.length)];
+var tail = tails[Math.floor(Math.random() * tails.length)];
+
 function fullCanvas() {
 	myCanvas = createCanvas(windowWidth, windowHeight);
 	//console.log(myCanvas);
@@ -101,7 +107,7 @@ function Unicorn(position, movement, size){
 Unicorn.prototype.draw = function() {
 	push();
 		textSize(this.size);
-		text("🦄", this.position.x, this.position.y);
+		text(head, this.position.x, this.position.y);
 	pop();
 }
 
@@ -140,7 +146,7 @@ function Rainbow(position, size){
 Rainbow.prototype.draw = function() {
 	push();
 		textSize(this.size);
-		text("🌈", this.position.x, this.position.y);
+		text(tail, this.position.x, this.position.y);
 	pop();
 }
 
