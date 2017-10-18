@@ -36,7 +36,7 @@ function draw() {
 			points.unshift({x:mouseX,y:mouseY});
 
 			
-			for (var i = 0; i < 4; i++) {
+			for (var i = 0; i < 3; i++) {
 				var particleStartPoint = {
 					x: random(width),
 					y: random(height)
