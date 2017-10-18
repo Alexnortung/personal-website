@@ -1,12 +1,12 @@
 var myCanvas;
-var backgroundColor = [240, 230, 230];
-var objectMaxAge = 10000;
-var objects = [];
-var layer1 = [];
-var layer2 = [];
-var unicornsPerMinute = 120;
-var tick = 0;
-var unicornsThisMinute = 0;
+var backgroundColor 	= [0x87,0xce,0xeb];
+var objectMaxAge 		= 10000;
+var objects 			= [];
+var layer1 				= [];
+var layer2 				= [];
+var tick 				= 0;
+
+var backgroundEnabled	= true;
 
 function fullCanvas() {
 	myCanvas = createCanvas(windowWidth, windowHeight);
@@ -37,17 +37,21 @@ function draw(){
 	pop();
 	*/
 
-	if (tick % 30 == 0) {
-		var unicornObj = new Unicorn(
-			new Vector(windowWidth, random(windowHeight)),
-			new Vector(random(-5) -5,0),
-			48
-			//+Math.random() * 16
-			//+random(16)
-		);
-		layer1.push(unicornObj);
-		objects.push(unicornObj);
+	if (backgroundEnabled) {
+
+		if (tick % 30 == 0) {
+			var unicornObj = new Unicorn(
+				new Vector(windowWidth, random(windowHeight)),
+				new Vector(random(-5) -5,0),
+				48
+				//+Math.random() * 16
+				//+random(16)
+			);
+			layer1.push(unicornObj);
+			objects.push(unicornObj);
+		}
 	}
+
 	tick++;
 
 	for (var i = layer2.length - 1; i >= 0; i--) {
@@ -148,5 +152,14 @@ Rainbow.prototype.update = function() {
 		if (this.size<= 0) {
 			this.age = objectMaxAge;
 		}
+	}
+}
+
+
+function toggleBackground() {
+	if (backgroundEnabled) {
+		backgroundEnabled = false;
+	} else {
+		backgroundEnabled = true;
 	}
 }

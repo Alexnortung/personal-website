@@ -1,12 +1,13 @@
 var myCanvas;
-var points = [];
-var maxPoints = 5;
-var backgroundColor = [240, 230, 230];
-//var warmColor = [229, 155, 103];
-var objects = [];
-var particleMaxAge = 10000;
-var particleDefaultSpeed = 3;
-var backgroundEnabled = true;
+var points 					= [];
+var maxPoints 				= 5;
+
+var backgroundColor			= [240, 230, 230];
+
+var objects 				= [];
+var particleMaxAge 			= 10000;
+var particleDefaultSpeed 	= 3;
+var backgroundEnabled 		= true;
 
 
 function fullCanvas() {
