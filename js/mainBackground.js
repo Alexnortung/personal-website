@@ -8,11 +8,12 @@ var tick 				= 0;
 
 var backgroundEnabled	= true;
 
-var heads = "🦄🐳🐲";
-var tails = "🌈⭐🔥";
-
-var head = heads[Math.floor(Math.random() * heads.length)];
-var tail = tails[Math.floor(Math.random() * tails.length)];
+var heads = ["🦄","🐳","🐲","💰"];
+var tails = ["🌈","🌊","🔥","💵"];
+var r = Math.floor(Math.random() * heads.length);
+//var r = 3;
+var head = heads[r];
+var tail = tails[r];
 
 function fullCanvas() {
 	myCanvas = createCanvas(windowWidth, windowHeight);
