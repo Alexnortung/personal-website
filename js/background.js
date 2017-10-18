@@ -10,7 +10,7 @@ var backgroundEnabled = true;
 
 
 function fullCanvas() {
-	myCanvas = createCanvas(window.innerWidth,window.innerHeight);
+	myCanvas = createCanvas(windowWidth, windowHeight);
 	myCanvas.parent("pageWrapper");
 	myCanvas.canvas.classList.add("zm1");
 	//myCanvas.canvas.width = window.innerWidth;
