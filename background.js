@@ -32,17 +32,22 @@ function draw() {
 	if (mouseX != 0 || mouseY != 0) {
 		points.unshift({x:mouseX,y:mouseY});
 
-		var particleStartPoint = {
-			x: random(width),
-			y: random(height)
+		
+		for (var i = 0; i < 4; i++) {
+			var particleStartPoint = {
+				x: random(width),
+				y: random(height)
+			}
+
+			objects.push(
+			new Particle(
+				new Vector(particleStartPoint.x, particleStartPoint.y), 
+				(new Vector(Math.random()-0.5,Math.random()-0.5))
+				.setMagnitude(particleDefaultSpeed)
+			)
+		);
 		}
-		objects.push(
-		new Particle(
-			new Vector(particleStartPoint.x, particleStartPoint.y), 
-			(new Vector(Math.random()-0.5,Math.random()-0.5))
-			.setMagnitude(particleDefaultSpeed)
-		)
-	);
+		
 		
 	}
 
