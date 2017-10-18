@@ -1,11 +1,12 @@
 var myCanvas;
 var points = [];
 var maxPoints = 5;
-var backgroundColor = [242, 237, 230];
+var backgroundColor = [240, 230, 230];
 //var warmColor = [229, 155, 103];
 var objects = [];
 var particleMaxAge = 10000;
 var particleDefaultSpeed = 3;
+var backgroundEnabled = true;
 
 
 function fullCanvas() {
@@ -29,38 +30,40 @@ function setup() {
 
 function draw() {
 	background(backgroundColor[0], backgroundColor[1], backgroundColor[2]);
-	if (mouseX != 0 || mouseY != 0) {
-		points.unshift({x:mouseX,y:mouseY});
-
+	if (backgroundEnabled) {
 		
-		for (var i = 0; i < 4; i++) {
-			var particleStartPoint = {
-				x: random(width),
-				y: random(height)
+		if (mouseX != 0 || mouseY != 0) {
+			points.unshift({x:mouseX,y:mouseY});
+
+			
+			for (var i = 0; i < 4; i++) {
+				var particleStartPoint = {
+					x: random(width),
+					y: random(height)
+				}
+
+				objects.push(
+				new Particle(
+					new Vector(particleStartPoint.x, particleStartPoint.y), 
+					(new Vector(Math.random()-0.5,Math.random()-0.5))
+					.setMagnitude(particleDefaultSpeed)
+				)
+			);
 			}
-
-			objects.push(
-			new Particle(
-				new Vector(particleStartPoint.x, particleStartPoint.y), 
-				(new Vector(Math.random()-0.5,Math.random()-0.5))
-				.setMagnitude(particleDefaultSpeed)
-			)
-		);
+			
+			
 		}
-		
-		
-	}
-
 	
 
-	if (points.length > maxPoints) {
-		stroke(0);
-		for (var i = 0; i < maxPoints; i++) {
+		if (points.length > maxPoints) {
+			stroke(0);
+			for (var i = 0; i < maxPoints; i++) {
+				
+				line(points[i].x,points[i].y,points[i+1].x,points[i+1].y);
+			}
 			
-			line(points[i].x,points[i].y,points[i+1].x,points[i+1].y);
+			points.splice(maxPoints, 1);
 		}
-		
-		points.splice(maxPoints, 1);
 	}
 
 	for (var i = 0; i < objects.length; i++) {
@@ -140,3 +143,11 @@ window.onresize = function(){
 
 
 
+
+function toggleBackground() {
+	if (backgroundEnabled) {
+		backgroundEnabled = false;
+	} else {
+		backgroundEnabled = true;
+	}
+}
