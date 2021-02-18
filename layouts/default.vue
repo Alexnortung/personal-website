@@ -7,5 +7,10 @@
 
 <script>
 export default {
+    head() {
+        return {
+            title: 'Alexander Nortung',
+        }
+    }
 }
 </script>

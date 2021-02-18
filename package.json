@@ -1,6 +1,10 @@
 {
   "name": "personal-website",
   "private": true,
+  "browserlist": [
+    "last 2 versions",
+    "ie >= 9"
+  ],
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -11,6 +15,9 @@
     "nuxt": "^2.15.0"
   },
   "devDependencies": {
+    "@nuxtjs/google-fonts": "^1.2.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "autoprefixer": "^10.2.4",
     "fibers": "^5.0.0",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.1.1"

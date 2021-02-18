@@ -1,14 +1,42 @@
+@import 'variables';
+
+// font
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
 // General
 body, html {
     padding: 0;
     margin: 0;
+    background-color: $dark;
+    color: $font-color;
 }
 
-// Color scheme
-$primary: #e70038;
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
 
-// screen sizes
+p {
+    margin: 0;
+    margin-bottom: 1rem;
+}
 
+hr {
+    color: $font-color;
+}
 
-// padding sizes
+a {
+    text-decoration: underline;
+    &, &:visited {
+        color: $link-color;
+    }
+}
 
+.spacer {
+    &-1 {
+        margin-top: 1rem;
+    }
+    &-2 {
+        margin-top: 2rem;
+    }
+}

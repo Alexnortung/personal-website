@@ -2,7 +2,16 @@
     <div>
         <hero
             headline="Hi, I am Alexander Nortung"
-            src="https://placehold.it/800x400"></hero>
+            :isPrimary=true
+            >
+                <hr />
+                <h2>Check out my <nuxt-link to="/portfolio">portfolio</nuxt-link></h2>
+            </hero>
+        <container>
+            <p>
+                This page is currently under development.
+            </p>
+        </container>
     </div>
 </template>
 
