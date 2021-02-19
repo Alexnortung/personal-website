@@ -5,7 +5,7 @@
             :isPrimary=true
             >
                 <hr />
-                <h2>Check out my <nuxt-link to="/portfolio">portfolio</nuxt-link>. Gamedev + Webdev</h2>
+                <h2>Check out my <nuxt-link to="/portfolio">portfolio</nuxt-link>.</h2>
             </hero>
         <container>
             <p>
