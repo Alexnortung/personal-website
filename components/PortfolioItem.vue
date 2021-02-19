@@ -97,7 +97,7 @@ export default {
         background-color: $grey;
         border-radius: 10px;
         padding: 1rem;
-        // box-shadow: 10px 0px 12px #999;
+        line-height: 0;
 
         & > img {
             border-radius: 4px;
