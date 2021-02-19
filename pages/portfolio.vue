@@ -11,11 +11,6 @@
                 :technologies="item.technologies"
                 :image="item.image"
                 :livelink="item.livelink">{{item.description}}</portfolio-item>
-
-            <!-- <h2>Open source contributions</h2>
-            <ul>
-                <li><a href="https://github.com/mjmlio/mjml" target="_blank">MJML</a></li>
-            </ul> -->
         </container>
     </div>
 </template>
