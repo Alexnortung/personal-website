@@ -19,4 +19,4 @@ cp .travis/deployignore .gitignore
 git add .
 git status # debug
 git commit -m "Deploy compressed files"
-git push -f deploy HEAD
+git push -f -u deploy master
