@@ -10,20 +10,6 @@ export default {
     buildModules: [
         '@nuxtjs/google-fonts',
     ],
-    build: { 
-        postcss: {
-            // plugins: {
-            //     'autoprefixer': true,
-            // },
-            // preset: {
-            //     autoprefixer: {
-            //         grid: true,
-            //         gradient: true,
-            //         overrideBrowserslist: ['last 2 versions', 'ie >= 9']
-            //     },
-            // },
-        },
-    },
     googleFonts: {
         families: {
             'OpenSans': {

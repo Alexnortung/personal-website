@@ -1,10 +1,6 @@
 {
   "name": "personal-website",
   "private": true,
-  "browserlist": [
-    "last 2 versions",
-    "ie >= 9"
-  ],
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
