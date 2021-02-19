@@ -5,7 +5,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "generate": "nuxt generate",
-    "start": "nuxt start"
+    "start": "nuxt start",
+    "test": "echo 'No tests given'"
   },
   "dependencies": {
     "nuxt": "^2.15.0"
