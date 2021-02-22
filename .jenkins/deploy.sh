@@ -3,7 +3,7 @@
 # print outputs and exit on first failure
 set -xe
 
- # setup ssh agent, git config and remote
+# setup ssh agent, git config and remote
 eval "$(ssh-agent -s)"
 ssh-add $SSH_KEY_FOR_NORTUNGDK
 echo "added ssh-key successfully"
