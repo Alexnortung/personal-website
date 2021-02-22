@@ -17,9 +17,9 @@ pipeline {
                     sh 'sh .jenkins/deploy.sh'
                     // sh 'mkdir -p ~/.ssh'
                     // sh 'ssh-keyscan -t rsa nortung.dk >> ~/.ssh/known_hosts'
-                    // sh 'eval "$(ssh-agent -s)"'
-                    // sh 'ssh-add $SSH_KEY_FOR_NORTUNGDK'
-                    // sh 'git remote add deploy "jenkins@nortung.dk:/var/www/nortung.dk"'
+                    // sh 'eval "$(ssh-agent -s)" && ssh-add $SSH_KEY_FOR_NORTUNGDK'
+                    // // sh 'ssh-add $SSH_KEY_FOR_NORTUNGDK'
+                    // sh 'git remote add deploy "jenkins@nortung.dk:/var/www/nortung.dk" || echo "remote already exists"'
                     // sh 'git config user.name "Jenkins CI"'
                     // sh 'git config user.email "jenkins@nortung.dk"'
                     // echo "git config updated successfully"

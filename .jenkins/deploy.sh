@@ -4,11 +4,13 @@
 set -xe
 
 # setup ssh agent, git config and remote
+mkdir -p ~/.ssh
+ssh-keyscan -t rsa nortung.dk >> ~/.ssh/known_hosts
 eval "$(ssh-agent -s)"
 ssh-add $SSH_KEY_FOR_NORTUNGDK
 echo "added ssh-key successfully"
 
-git remote add deploy "jenkins@nortung.dk:/var/www/nortung.dk"
+git remote add deploy "jenkins@nortung.dk:/var/www/nortung.dk" || echo "remote already exists"
 git config user.name "Jenkins CI"
 git config user.email "jenkins@nortung.dk"
 echo "git config updated successfully"
